@@ -29,7 +29,7 @@ void uart_send(char letter){
     while (!UART->EVENTS_TXDRDY){
     }
     UART->TASKS_STOPTX = 1;
-    UART->TASKS_STARTTX = 0;
+    UART->TASKS_STARTTX = 0; //usikker på om dette skal gjøres
     UART->EVENTS_TXDRDY = 0;
 }
 
